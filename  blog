@@ -1,0 +1,1227 @@
+        # layout: layouts/post.njk            # Eleventy → use this instead
+
+        # ── IDENTITY ────────────────────────────────────────────────────
+        title: "FAA Delegation & Sovereign Immunity | SmoothOperationofLaw™"
+        heading: "FAA Delegation & Sovereign Immunity"  # optional display override
+        subtitle: "Anchoring enforceability under federal law"
+        author: "Lord Ramon De Leon, Head Trustee"
+
+        # ── DATES ───────────────────────────────────────────────────────
+        date: 2025-11-11 09:00:00 -0800         # Jekyll datetime
+        # date: 2025-11-11T09:00:00-08:00      # Eleventy ISO format (use this)
+        last_modified_at: 2025-11-15            # Jekyll (jekyll-last-modified-at gem)
+        # updated: 2025-11-15T00:00:00-08:00   # Eleventy equivalent
+
+        # ── ROUTING ─────────────────────────────────────────────────────
+        permalink: /faa-delegation-sovereign-immunity/
+
+        # ── SEO / OPEN GRAPH ────────────────────────────────────────────
+        description: "Operational guide to FAA delegation, Lanham Act vectors, and sovereign-immunity enforcement for trustees."
+        excerpt: "Deploy FAA delegation and Lanham vectors to compel enforceability and defeat procedural gamesmanship."
+        image: "https://smoothoperationoflaw.website/assets/img/faa-delegation.jpg"
+        image_alt: "Arbitration delegation graphic"
+
+        # ── TAXONOMY ────────────────────────────────────────────────────
+        tags:
+        - trust
+        - arbitration
+        - assetprotection
+        - ipprotection
+        - legalframework
+
+        categories:
+        - trustadministration
+        - enforcement
+        - fiduciaryservices
+
+        # ── LEGAL FRAMEWORKS (auto-renders table in layout) ─────────────
+        legal_frameworks:
+        - name: "Federal Arbitration Act"
+        citation: "9 U.S.C. §§ 1–16"
+        application: "Arbitration agreements & enforcement"
+        - name: "Lanham Act"
+        citation: "15 U.S.C. § 1122"
+        application: "Sovereign immunity waiver"
+        - name: "ADRA"
+        citation: "5 U.S.C. §§ 571–584"
+        application: "Federal agency arbitration authority"
+        - name: "AT&T Mobility v. Concepcion"
+        citation: "563 U.S. 333 (2011)"
+        application: "FAA preemption of state arbitration limits"
+        - name: "Rent-A-Center v. Jackson"
+        citation: "561 U.S. 63 (2010)"
+        application: "Delegation clause enforceability"
+
+        ---
+
+        # **[Article Title]**
+
+        ## **[Optional Subtitle]**
+
+        > **"[Optional Featured Quote]"**
+        > *[Attribution]*
+
+        ## 📋 **Executive Summary**
+
+        [Body…]
+
+        ## 🎯 **Section 1: [Topic]**
+
+        [Body…]
+
+        ## ⚖️ **Section 2: Legal Framework**
+
+        [Body…]
+
+        ## 🔑 **Key Takeaways**
+
+        [Body…]
+
+        ---
+        *Trustee Authorization: GA-TR-RDL2018-2025*\`;
+
+        /* ─── ASCIIDOC MAP ────────────────────────────────────────────────────── */`;
+
+        TEMPLATES.adoc = `////
+        docs/adoc-fm-map.adoc
+        AsciiDoc Header Attribute → Jekyll / Eleventy Front Matter Mapping
+        SmoothOperationofLaw™ Irrevocable Trust
+        ──────────────────────────────────────────────────────────────
+        Jekyll  : jekyll-asciidoc gem — :page-*: attributes auto-map to page.*
+        Eleventy: @11ty/eleventy-plugin-asciidoc — same :page-*: convention
+        ////
+
+        // ── DIRECT MAPPINGS ──────────────────────────────────────────────────────
+        // AsciiDoc Attribute           Front Matter Key          Notes
+        // ─────────────────────────────────────────────────────────────────────────
+        // :page-title:              →  title
+        // :page-subtitle:           →  subtitle                  hero subheading
+        // :page-heading:            →  heading                   optional display override
+        // :page-author:             →  author
+        // :page-date:               →  date                      ISO format preferred
+        // :page-last-updated:       →  last_modified_at          Jekyll
+        //                              updated                   Eleventy
+        // :page-description:        →  description               SEO meta + OG
+        // :page-excerpt:            →  excerpt                   SEO + excerpt box
+        // :page-image:              →  image                     OG + cover figure
+        // :page-image-alt:          →  image_alt
+        // :page-permalink:          →  permalink
+        // :page-tags:               →  tags                      comma-sep string → array*
+        // :page-categories:         →  categories                comma-sep string → array*
+        //
+        // * Jekyll: use _plugins/fix_array_attrs.rb (see below) to auto-split strings
+        // * Eleventy: add addTransform or computed data to split on ","
+
+        // ── ASCIIDOC-ONLY (no direct FM equivalent) ──────────────────────────────
+        // :toc: auto                →  handled by layout CSS/JS TOC
+        //                              optional: add data-toc="true" to <main>
+        // :toclevels: 2             →  pass as :page-toclevels: 2
+        //                              read in layout as page.toclevels (Jekyll)
+        //                              or toclevels (Eleventy)
+        // :imagesdir:               →  NOT in front matter; set per-environment:
+        //
+        //   ifndef::env-site[]
+        //   :imagesdir: ../app/src/main/assets/img
+        //   endif::[]
+        //   ifdef::env-site[]
+        //   :imagesdir: ../assets/img/blog
+        //   endif::[]
+
+        // ── EXAMPLE ASCIIDOC PREAMBLE ────────────────────────────────────────────
+        = FAA Delegation & Sovereign Immunity
+        :page-subtitle: Anchoring enforceability under federal law
+        :page-author: Lord Ramon De Leon, Head Trustee
+        :page-date: 2025-11-11
+        :page-last-updated: 2025-11-15
+        :page-permalink: /faa-delegation-sovereign-immunity/
+        :page-description: Operational guide to FAA delegation, Lanham Act vectors, and sovereign-immunity enforcement for trustees.
+        :page-excerpt: Deploy FAA delegation and Lanham vectors to compel enforceability and defeat procedural gamesmanship.
+        :page-image: https://smoothoperationoflaw.website/assets/img/faa-delegation.jpg
+        :page-image-alt: Arbitration delegation graphic
+        :page-tags: trust,arbitration,assetprotection,ipprotection,legalframework
+        :page-categories: trustadministration,enforcement,fiduciaryservices
+        :toc: auto
+        :toclevels: 2
+
+        ifndef::env-site[]
+        :imagesdir: ../app/src/main/assets/img
+        endif::[]
+        ifdef::env-site[]
+        :imagesdir: ../assets/img/blog
+        endif::[]
+
+        // ── JEKYLL PLUGIN: auto-split comma-sep tag/category strings ─────────────
+        // _plugins/fix_array_attrs.rb
+        //
+        //   Jekyll::Hooks.register :posts, :pre_render do |post|
+        //     %w[tags categories].each do |key|
+        //       val = post.data[key]
+        //       post.data[key] = val.split(",").map(&:strip) if val.is_a?(String)
+        //     end
+        //   end
+
+        // ── CREDENTIAL FOOTER (append to every .adoc post) ───────────────────────
+        // ---
+        // _Trustee Authorization: GA-TR-RDL2018-202`;
+
+        TEMPLATES.ch4 = `= Chapter 4: The Federal Arbitration Act — Your Primary Enforcement Engine
+        :chapter: 4
+        :part: II
+        :certification: CATM
+        :page-author: Lord Ramon De Leon, Head Trustee
+        :page-last-updated: 2025-01-01
+        :toc: auto
+        :toclevels: 3
+        :imagesdir: ../assets/img/chapters
+
+        // ── COURSE NAVIGATION ────────────────────────────────────────────────────
+        link:../index.html[← Course Home] | link:chapter-03.html[← Chapter 3] | link:chapter-05.html[Chapter 5 →]
+
+        // ── CHAPTER KICKER ───────────────────────────────────────────────────────
+        [.kicker]
+        Part II — CATM Certification · Chapter 4 of 12
+
+        '''
+
+        // ── OPENING AUTHORITY BLOCK ──────────────────────────────────────────────
+        [.authority-block]
+        ____
+        *Primary Authority:* 9 U.S.C. §§ 1–16 (Federal Arbitration Act)
+
+        *Supporting Doctrine:*
+
+        * _AT&T Mobility LLC v. Concepcion_, 563 U.S. 333 (2011)
+        * _Henry Schein, Inc. v. Archer & White Sales_, 586 U.S. 63 (2019)
+        * _Rent-A-Center, West, Inc. v. Jackson_, 561 U.S. 63 (2010)
+        * _Hall Street Associates v. Mattel, Inc._, 552 U.S. 576 (2008)
+        * _C&L Enterprises, Inc. v. Citizen Band Potawatomi Tribe_, 532 U.S. 411 (2001)
+        ____
+
+        '''
+
+        == 🎯 Chapter Overview
+
+        [.lead]
+        // FILL IN: 2–3 sentences. Why the FAA is the cornerstone of SOL™ enforcement
+        // strategy. Frame it as a weapon — not background law.
+        [YOUR DOCTRINE HERE]
+
+        === What You Will Master in This Chapter
+
+        // FILL IN: 4–6 bullet outcomes. Start each with an action verb.
+        * [Outcome 1]
+        * [Outcome 2]
+        * [Outcome 3]
+        * [Outcome 4]
+        * [Outcome 5]
+
+        === Why This Chapter Is Non-Negotiable
+
+        // FILL IN: The cost of not knowing the FAA cold. What happens to trustees
+        // who ignore or misread it. Real-world consequence framing.
+        [YOUR DOCTRINE HERE]
+
+        '''
+
+        == 📜 Section 4.1 — Anatomy of the FAA (9 U.S.C. §§ 1–16)
+
+        === 4.1.1 The Statute at a Glance
+
+        // FILL IN: Plain-language breakdown of each key section (§§ 1, 2, 3, 4, 9,
+        // 10, 11, 13). What each section does operationally for a trustee.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,3,3",options="header",frame="sides",grid="rows"]
+        |===
+        |Section |What It Says |What It Does for You
+
+        |§ 1
+        |[FILL IN: statutory language summary]
+        |[FILL IN: operational use]
+
+        |§ 2
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 3
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 4
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 9
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 10
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 11
+        |[FILL IN]
+        |[FILL IN]
+
+        |§ 13
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === 4.1.2 The Supremacy Problem — Why State Courts Lose
+
+        // FILL IN: FAA preemption doctrine. How Concepcion cemented federal
+        // supremacy. The specific moves opposing counsel tries and why they fail.
+        [YOUR DOCTRINE HERE]
+
+        // TIP BLOCK — fill in your tactical insight
+        [TIP]
+        ====
+        *Lord Ramon's Field Note:* [FILL IN — one tactical insight from practice]
+        ====
+
+        === 4.1.3 What "Validity, Revocability, and Enforceability" Actually Means
+
+        // FILL IN: § 2 unpacked. The "save upon such grounds as exist at law or in
+        // equity" language — what challengers use and how you neutralize it.
+        [YOUR DOCTRINE HERE]
+
+        '''
+
+        == ⚖️ Section 4.2 — The Delegation Clause: Your First Line of Defense
+
+        === 4.2.1 What a Delegation Clause Does
+
+        // FILL IN: Delegation = arbitrator decides arbitrability, not a court.
+        // Why this is the single most important clause in any SOL™ agreement.
+        [YOUR DOCTRINE HERE]
+
+        === 4.2.2 Henry Schein and the Clear and Unmistakable Standard
+
+        // FILL IN: Full breakdown of Henry Schein. What "clear and unmistakable"
+        // means in practice. How to draft to meet it. What courts look for.
+        [YOUR DOCTRINE HERE]
+
+        // WARNING BLOCK — fill in the drafting trap
+        [WARNING]
+        ====
+        *Drafting Trap:* [FILL IN — the exact language mistake that kills delegation]
+        ====
+
+        === 4.2.3 SOL™ Delegation Clause — Model Language
+
+        // FILL IN: Your preferred delegation clause language. Reference the
+        // SOL-XXXX template series number this clause lives in.
+
+        [source,text]
+        ----
+        [FILL IN: Model delegation clause text — verbatim language you use]
+        ----
+
+        [NOTE]
+        ====
+        *Template Reference:* SOL-[XXXX] · Available to CATM+ certified trustees.
+        ====
+
+        === 4.2.4 Rent-A-Center and Nested Delegation
+
+        // FILL IN: What Rent-A-Center added to the doctrine. The "agreement to
+        // arbitrate the arbitrability question" construction. Practical deployment.
+        [YOUR DOCTRINE HERE]
+
+        '''
+
+        == 🔥 Section 4.3 — Concepcion: The Nuclear Option
+
+        === 4.3.1 What Concepcion Actually Held
+
+        // FILL IN: The holding — not law school summary, your operational read.
+        // California's Discover Bank rule. Why the Court killed it. What it means
+        // for any state-law challenge to your agreements.
+        [YOUR DOCTRINE HERE]
+
+        === 4.3.2 How You Deploy Concepcion in Motion Practice
+
+        // FILL IN: Step-by-step. What motion you file, what you cite, what
+        // argument you lead with, where opposing counsel will try to distinguish.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,2,2",options="header"]
+        |===
+        |Opposing Move |Their Argument |Your Counter (FAA-Based)
+
+        |[FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |[FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |[FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === 4.3.3 The Limit — What Concepcion Does Not Do
+
+        // FILL IN: Where Concepcion stops. What unconscionability arguments survive.
+        // How you draft around the edges to minimize exposure.
+        \`\`\`
+        [YOUR DOCTRINE HERE]
+
+        \`\`\`
+        '''
+
+        == 🏛️ Section 4.4 — Confirmation, Vacation, and Modification (§§ 9–11)
+
+        === 4.4.1 § 9 — Confirming the Award: Speed Is the Weapon
+
+        // FILL IN: The one-year window. Why you move to confirm immediately.
+        // The tactical effect of a confirmed award vs. a raw arbitration ruling.
+        [YOUR DOCTRINE HERE]
+
+        === 4.4.2 § 10 — The Four Grounds for Vacation (And Why They Rarely Succeed)
+
+        // FILL IN: Fraud, corruption, misbehavior, exceeding powers. The narrow
+        // construction courts apply. How Hall Street locked the door on expansion.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,3",options="header"]
+        |===
+        |§ 10 Ground |Why It Fails Against a Well-Drafted SOL™ Award
+
+        |Fraud / Corruption
+        |[FILL IN]
+
+        |Evident Partiality
+        |[FILL IN]
+
+        |Arbitrator Misconduct
+        |[FILL IN]
+
+        |Exceeded Powers
+        |[FILL IN]
+        |===
+
+        === 4.4.3 § 11 — Modification: When You Use It Offensively
+
+        // FILL IN: The three § 11 grounds. When modification works in your favor
+        // vs. when you oppose it. Tactical notes from practice.
+        [YOUR DOCTRINE HERE]
+
+        === 4.4.4 Hall Street — Why Contractual Expansion of Review Is Dead
+
+        // FILL IN: The holding. What parties tried to do. Why the Court said no.
+        // How this protects your awards once confirmed.
+        [YOUR DOCTRINE HERE]
+
+        '''
+
+        == 🛡️ Section 4.5 — FAA + Sovereign Immunity: The C&L Potawatomi Play
+
+        === 4.5.1 Why Sovereign Immunity Is Not the Wall They Think It Is
+
+        // FILL IN: The general tribal/governmental immunity doctrine and
+        // where the FAA punches through it. C&L Enterprises full breakdown.
+        [YOUR DOCTRINE HERE]
+
+        === 4.5.2 The C&L Enterprises Framework — Step by Step
+
+        // FILL IN: The Court's analysis. Contract-based waiver. How you structure
+        // agreements to trigger the waiver analysis. Drafting requirements.
+        [YOUR DOCTRINE HERE]
+
+        === 4.5.3 Lanham Act § 1122 as a Parallel Vector
+
+        // FILL IN: When you run FAA and Lanham Act § 1122 simultaneously.
+        // Why the parallel track applies pressure at two enforcement points.
+        [YOUR DOCTRINE HERE]
+
+        // TIP BLOCK
+        [TIP]
+        ====
+        *Lord Ramon's Field Note:* [FILL IN — your tactical note on running dual vectors]
+        ====
+
+        '''
+
+        == 📋 Section 4.6 — Drafting the FAA-Compliant Arbitration Agreement
+
+        === 4.6.1 The Eight Non-Negotiable Clauses
+
+        // FILL IN: Your definitive list. For each: the clause, why it's in there,
+        // what happens if it's missing.
+
+        [cols="1,2,2",options="header"]
+        |===
+        |Clause |Purpose |Consequence if Absent
+
+        |1. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |2. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |3. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |4. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |5. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |6. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |7. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+
+        |8. [FILL IN]
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === 4.6.2 Rules Incorporation — AAA, JAMS, or SOL™ Private Rules
+
+        // FILL IN: Which ruleset you incorporate and why. The effect of rules
+        // incorporation on the delegation analysis. Your recommendation.
+        [YOUR DOCTRINE HERE]
+
+        === 4.6.3 The SOL™ Arbitration Agreement — Model Structure
+
+        // FILL IN: High-level structure of your canonical agreement.
+        // Clause order, section headers, signature block requirements.
+        // Reference the SOL-XXXX template number.
+
+        [NOTE]
+        ====
+        *Full Template:* SOL-[XXXX] · Available in the CATM Resource Vault.
+        ====
+
+        '''
+
+        == ⚙️ Section 4.7 — FAA Enforcement: The Motion Sequence
+
+        === 4.7.1 Compelling Arbitration (§ 4 Motion)
+
+        // FILL IN: When you file, what you attach, the burden standard, how courts
+        // analyze the "significant relationship" to interstate commerce requirement.
+        [YOUR DOCTRINE HERE]
+
+        === 4.7.2 Staying Litigation Pending Arbitration (§ 3 Motion)
+
+        // FILL IN: The mandatory nature of the stay once arbitrability is shown.
+        // How you use it to halt adverse state proceedings. Tactical timing.
+        [YOUR DOCTRINE HERE]
+
+        === 4.7.3 Confirming the Award in Federal Court (§ 9 Motion)
+
+        // FILL IN: Venue selection, service, the streamlined confirmation standard,
+        // converting the confirmed award to a federal judgment for FRCP Rule 69
+        // collection enforcement.
+        [YOUR DOCTRINE HERE]
+
+        === 4.7.4 The Full Motion Sequence — Timeline
+
+        [cols="1,2,2",options="header"]
+        |===
+        |Stage |Motion / Filing |Strategic Purpose
+
+        |1
+        |[FILL IN]
+        |[FILL IN]
+
+        |2
+        |[FILL IN]
+        |[FILL IN]
+
+        |3
+        |[FILL IN]
+        |[FILL IN]
+
+        |4
+        |[FILL IN]
+        |[FILL IN]
+
+        |5
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        '''
+
+        == 🎓 Section 4.8 — Chapter Summary & CATM Checkpoint
+
+        === Core Principles — Chapter 4
+
+        // FILL IN: 5–7 numbered takeaways. Crisp. Doctrine-level statements.
+        // These become the "rules" students memorize for the CATM exam.
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+
+        === CATM Assessment — Chapter 4
+
+        // FILL IN: 5 short-answer or scenario-based questions testing the chapter.
+        // These gate progression to Chapter 5.
+
+        *Question 1:* [FILL IN — FAA § 2 application scenario]
+
+        *Question 2:* [FILL IN — delegation clause drafting question]
+
+        *Question 3:* [FILL IN — Concepcion preemption scenario]
+
+        *Question 4:* [FILL IN — § 9/10 confirmation vs. vacation question]
+
+        *Question 5:* [FILL IN — multi-vector enforcement scenario]
+
+        === Key Terms — Chapter 4
+
+        // FILL IN: 8–10 terms with one-line definitions. Builds student glossary.
+        [cols="1,3",options="header"]
+        |===
+        |Term |Definition
+
+        |Delegation Clause
+        |[FILL IN]
+
+        |Arbitrability
+        |[FILL IN]
+
+        |FAA Preemption
+        |[FILL IN]
+
+        |Confirmation
+        |[FILL IN]
+
+        |Vacation
+        |[FILL IN]
+
+        |[FILL IN]
+        |[FILL IN]
+
+        |[FILL IN]
+        |[FILL IN]
+
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === Required Reading — Chapter 4
+
+        // FILL IN: 3–5 cases or statutes students must read before the assessment.
+        * [FILL IN]
+        * [FILL IN]
+        * [FILL IN]
+
+        '''
+
+        // ── CHAPTER NAVIGATION FOOTER ────────────────────────────────────────────
+        [.chapter-nav]
+        link:chapter-03.html[← Chapter 3: The Gambit Philosophy] | link:chapter-05.html[Chapter 5: IP Integration →]
+
+        '''
+
+        [.footer-credential]
+        _Trustee Authorization: GA-TR-RDL2018-2025 · SmoothOperationofLaw™ Irrevocable Trust_
+        _"My top priority is to earn your trust and keep it."_
+
+
+
+        ----
+
+
+        `;
+
+        TEMPLATES.ch5 = `= Chapter 5: IP Integration — Weaponizing Intellectual Property Inside the Trust
+        :chapter: 5
+        :part: II
+        :certification: CATM
+        :page-author: Lord Ramon De Leon, Head Trustee
+        :page-last-updated: 2025-01-01
+        :toc: auto
+        :toclevels: 3
+        :imagesdir: ../assets/img/chapters
+
+        // ── COURSE NAVIGATION ────────────────────────────────────────────────────
+        link:../index.html[← Course Home] | link:chapter-04.html[← Chapter 4] | link:chapter-06.html[Chapter 6 →]
+
+        [.kicker]
+        Part II — CATM Certification · Chapter 5 of 12
+
+        '''
+
+        // ── OPENING AUTHORITY BLOCK ──────────────────────────────────────────────
+        [.authority-block]
+        ____
+        *Primary Authority:*
+
+        * Lanham Act — 15 U.S.C. §§ 1051–1141 (Trademarks)
+        * Lanham Act § 1122 — Sovereign immunity waiver
+        * 15 U.S.C. §§ 1114–1118 — Civil remedies & enforcement
+        * Copyright Act — 17 U.S.C. §§ 101–1332
+        * 35 U.S.C. §§ 1–390 (Patents — foundational awareness)
+
+        *Supporting Doctrine:*
+
+        * _Two Pesos, Inc. v. Taco Cabana, Inc._, 505 U.S. 763 (1992)
+        * _Qualitex Co. v. Jacobson Products Co._, 514 U.S. 159 (1995)
+        * _Dastar Corp. v. Twentieth Century Fox Film Corp._, 539 U.S. 23 (2003)
+        * _eBay Inc. v. MercExchange, L.L.C._, 547 U.S. 388 (2006)
+        * SOL™ Brand Manual v2.0 (internal authority)
+        ____
+
+        '''
+
+        == 🎯 Chapter Overview
+
+        [.lead]
+        // FILL IN: Why IP is not just branding — it is a revenue-generating,
+        // litigation-deterring, trust-protecting asset class. Frame IP integration
+        // as an offensive doctrine, not defensive compliance.
+        [YOUR DOCTRINE HERE]
+
+        === What You Will Master in This Chapter
+
+        // FILL IN: 4–6 action-verb outcomes.
+        * [Outcome 1]
+        * [Outcome 2]
+        * [Outcome 3]
+        * [Outcome 4]
+        * [Outcome 5]
+
+        === The Integration Premise
+
+        // FILL IN: Why most trustees treat IP as an afterthought and what it costs
+        // them. The SOL™ position: IP belongs inside trust structure from Day 1.
+        [YOUR DOCTRINE HERE]
+
+        '''
+
+        == 📜 Section 5.1 — IP Inside the Trust: The Structural Case
+
+        === 5.1.1 Why IP Assets Belong in an Irrevocable Trust
+
+        // FILL IN: Asset protection rationale. Creditor reach limitations.
+        // Tax positioning. Control-without-ownership doctrine as applied to IP.
+        [YOUR DOCTRINE HERE]
+
+        === 5.1.2 How IP Ownership Transfers Into the Trust
+
+        // FILL IN: Assignment mechanics. Recorded vs. unrecorded assignments.
+        // USPTO recordation (trademarks/patents). Copyright Office registration.
+        // What happens if you skip recordation.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,2,2",options="header",frame="sides",grid="rows"]
+        |===
+        |IP Type |Transfer Mechanism |Recordation Requirement
+
+        |Trademark
+        |[FILL IN]
+        |[FILL IN]
+
+        |Copyright
+        |[FILL IN]
+        |[FILL IN]
+
+        |Patent
+        |[FILL IN]
+        |[FILL IN]
+
+        |Trade Secret
+        |[FILL IN]
+        |[FILL IN]
+
+        |Domain / Digital Asset
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === 5.1.3 The Trustee's Fiduciary Duty to IP Assets
+
+        // FILL IN: Cal. Prob. Code §§ 16000–16015 as applied to IP.
+        // What "prudent investor" means for a trademark portfolio.
+        // Documentation requirements to prove active management.
+        [YOUR DOCTRINE HERE]
+
+        [WARNING]
+        ====
+        *Breach Trap:* [FILL IN — the specific inaction that triggers a fiduciary breach claim against a trustee who holds IP]
+        ====
+
+        '''
+
+        == ™️ Section 5.2 — Trademark Strategy: The Lanham Act as Enforcement Engine
+
+        === 5.2.1 What the Lanham Act Actually Gives You
+
+        // FILL IN: §§ 1114 (registered mark infringement), 1125(a) (false
+        // designation), 1125(c) (dilution). The three lanes and when you use each.
+        [YOUR DOCTRINE HERE]
+
+        === 5.2.2 Registration vs. Common Law Rights — The Real Difference
+
+        // FILL IN: The incontestability clock (5 years). § 15 affidavit.
+        // Constructive notice. Why common law rights are tactically inferior.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,2,2",options="header"]
+        |===
+        |Factor |Registered Mark |Common Law Mark
+
+        |Geographic Scope
+        |[FILL IN]
+        |[FILL IN]
+
+        |Constructive Notice
+        |[FILL IN]
+        |[FILL IN]
+
+        |Federal Court Access
+        |[FILL IN]
+        |[FILL IN]
+
+        |Incontestability
+        |[FILL IN]
+        |[FILL IN]
+
+        |Damages Available
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        === 5.2.3 Building an Incontestable Mark — The SOL™ Protocol
+
+        // FILL IN: Your step-by-step from application to § 15 incontestability.
+        // What you monitor, what you enforce, what you document.
+        [YOUR DOCTRINE HERE]
+
+        [TIP]
+        ====
+        *Lord Ramon's Field Note:* [FILL IN — your tactical note on timing enforcement to build the incontestability record]
+        ====
+
+        === 5.2.4 Lanham Act § 1122 — Piercing Sovereign Immunity
+
+        // FILL IN: Full breakdown of § 1122. When a state or tribal entity's
+        // IP infringement is reachable. The waiver-by-conduct doctrine.
+        // How this pairs with the C&L Enterprises FAA play from Chapter 4.
+        [YOUR DOCTRINE HERE]
+
+        === 5.2.5 Civil Remedies — §§ 1114–1118 Deployed
+
+        // FILL IN: Injunctive relief standard (post-eBay). Actual damages.
+        // Disgorgement. Statutory damages. Attorney fees (exceptional case).
+        // Which remedies you lead with and why.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,2,2",options="header"]
+        |===
+        |Remedy |Statutory Basis |When You Lead With It
+
+        |Preliminary Injunction
+        |[FILL IN]
+        |[FILL IN]
+
+        |Permanent Injunction
+        |[FILL IN]
+        |[FILL IN]
+
+        |Actual Damages
+        |[FILL IN]
+        |[FILL IN]
+
+        |Disgorgement of Profits
+        |[FILL IN]
+        |[FILL IN]
+
+        |Statutory Damages (counterfeiting)
+        |[FILL IN]
+        |[FILL IN]
+
+        |Attorney Fees
+        |[FILL IN]
+        |[FILL IN]
+
+        |Destruction of Infringing Goods
+        |[FILL IN]
+        |[FILL IN]
+        |===
+
+        '''
+
+        == 🔐 Section 5.3 — Copyright Integration
+
+        === 5.3.1 What Qualifies and Why Registration Still Matters
+
+        // FILL IN: The "original works of authorship" standard. The registration
+        // prerequisite for statutory damages and attorney fees. The Berne Convention
+        // auto-protection myth vs. litigation reality.
+        [YOUR DOCTRINE HERE]
+
+        === 5.3.2 Work-for-Hire Inside the Trust Structure
+
+        // FILL IN: The two work-for-hire categories. Written agreement requirements.
+        // How you structure contractor relationships so copyright vests in the trust,
+        // not the individual.
+        [YOUR DOCTRINE HERE]
+
+        [NOTE]
+        ====
+        *Template Reference:* SOL-[XXXX] — Work-for-Hire & IP Assignment Agreement · CATM Resource Vault.
+        ====
+
+        === 5.3.3 Copyright Enforcement — The DMCA and Federal Court Track
+
+        // FILL IN: § 512 takedown mechanics. When DMCA is enough vs. when you
+        // file in federal court. The registration timing trap (pre- vs. post-
+        // infringement registration and its effect on damages).
+        [YOUR DOCTRINE HERE]
+
+        === 5.3.4 Course Content as Copyright — Protecting The Trustee's Gambit
+
+        // FILL IN: How SOL™ course materials, templates (SOL-XXXX series),
+        // frameworks, and methodologies are protected. What enforcement looks like
+        // when a student or competitor infringes.
+        [YOUR DOCTRINE HERE]
+
+        [WARNING]
+        ====
+        *Enforcement Note:* [FILL IN — the specific language you include in course enrollment agreements that preserves copyright enforcement rights]
+        ====
+
+        '''
+
+        == 🔑 Section 5.4 — Trade Secrets and Proprietary Doctrine
+
+        === 5.4.1 The Defend Trade Secrets Act (DTSA) — Federal Track
+
+        // FILL IN: 18 U.S.C. §§ 1836–1839. What qualifies as a trade secret.
+        // The "reasonable measures" requirement and how you document it.
+        // Ex parte seizure — when and how.
+        [YOUR DOCTRINE HERE]
+
+        === 5.4.2 What SOL™ Proprietary Doctrine Qualifies as a Trade Secret
+
+        // FILL IN: Your specific methodologies, frameworks, template structures,
+        // and enforcement sequences that meet the DTSA definition. How you
+        // document "reasonable measures" to protect them.
+        [YOUR DOCTRINE HERE]
+
+        === 5.4.3 NDA Architecture for Trade Secret Protection
+
+        // FILL IN: The clauses that matter, the clauses that don't.
+        // What an NDA cannot do vs. what it can do. Your model NDA structure
+        // for students, contractors, and licensing partners.
+        [YOUR DOCTRINE HERE]
+
+        [NOTE]
+        ====
+        *Template Reference:* SOL-[XXXX] — NDA & Confidentiality Agreement · CATM Resource Vault.
+        ====
+
+        '''
+
+        == 💼 Section 5.5 — Licensing IP Out of the Trust
+
+        === 5.5.1 Why Licensing Is the Revenue Engine
+
+        // FILL IN: Royalty income inside an irrevocable trust — tax treatment.
+        // Control retention through licensing vs. outright assignment.
+        // The SOL™ licensing tiers (reference trademark licensing schedule).
+        [YOUR DOCTRINE HERE]
+
+        === 5.5.2 License Agreement Non-Negotiables
+
+        // FILL IN: Grant clause precision. Field-of-use restrictions.
+        // Quality control requirements (why this is mandatory for trademark
+        // validity). Audit rights. Termination triggers.
+        [YOUR DOCTRINE HERE]
+
+        [cols="1,3",options="header"]
+        |===
+        |Clause |Why Non-Negotiable
+
+        |Grant Clause
+        |[FILL IN]
+
+        |Field-of-Use Restriction
+        |[FILL IN]
+
+        |Quality Control
+        |[FILL IN]
+
+        |Audit Rights
+        |[FILL IN]
+
+        |Royalty + Payment Terms
+        |[FILL IN]
+
+        |Termination for Breach
+        |[FILL IN]
+
+        |Arbitration / Dispute Resolution
+        |[FILL IN]
+
+        |No-Challenge Clause
+        |[FILL IN]
+        |===
+
+        === 5.5.3 The Naked License Problem — How Trustees Accidentally Kill Their Mark
+
+        // FILL IN: What a naked license is. Why it results in trademark
+        // abandonment. The quality control documentation you must maintain.
+        // How SOL™ agreements are structured to prevent this.
+        [YOUR DOCTRINE HERE]
+
+        [WARNING]
+        ====
+        *Fatal Error:* [FILL IN — the exact scenario where a trustee issues a license without quality control language and loses the mark]
+        ====
+
+        === 5.5.4 SOL™ Licensing Schedule — Tiers and Territorial Restrictions
+
+        // FILL IN: Your actual tier structure. Fees. Territory. What each tier
+        // permits and prohibits. How violations trigger enforcement.
+        [YOUR DOCTRINE HERE]
+
+        [NOTE]
+        ====
+        *Full Schedule:* SOL-[XXXX] — Trademark Licensing Fee Schedule & Territorial Restriction Matrix · CATM+ Resource Vault.
+        ====
+
+        '''
+
+        == ⚔️ Section 5.6 — IP Enforcement: The Full Sequence
+
+        === 5.6.1 Cease and Desist — Structure and Tone
+
+        // FILL IN: What goes in, what doesn't. The deadline you set and why.
+        // What you attach. How tone affects the litigation posture that follows.
+        [YOUR DOCTRINE HERE]
+
+        === 5.6.2 When You File — Federal Court vs. Arbitration
+
+        // FILL IN: Decision tree. Trademark infringement → federal court.
+        // License breach → arbitration (if agreement has clause).
+        // When you run both simultaneously and why.
+        [YOUR DOCTRINE HERE]
+
+        === 5.6.3 Preliminary Injunction Motion — Post-eBay Standard
+
+        // FILL IN: The four-factor test. Where trademark cases win and lose on
+        // irreparable harm post-eBay. Your briefing approach.
+        [YOUR DOCTRINE HERE]
+
+        === 5.6.4 The IP + FAA Dual-Vector Play
+
+        // FILL IN: Running Lanham Act § 1122 and FAA § 4 simultaneously.
+        // How the two tracks create overlapping pressure. When to consolidate
+        // vs. keep separate. Reference Chapter 4, Section 4.5.3.
+        [YOUR DOCTRINE HERE]
+
+        [TIP]
+        ====
+        *Lord Ramon's Field Note:* [FILL IN — your tactical note on how dual-vector enforcement changes opposing counsel's calculus]
+        ====
+
+        '''
+
+        == 🎓 Section 5.7 — Chapter Summary & CATM Checkpoint
+
+        === Core Principles — Chapter 5
+
+        // FILL IN: 5–7 numbered doctrine-level takeaways students memorize.
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+        . [FILL IN]
+
+        === CATM Assessment — Chapter 5
+
+        *Question 1:* [FILL IN — trademark registration vs. common law scenario]
+
+        *Question 2:* [FILL IN — naked license / quality control scenario]
+
+        *Question 3:* [FILL IN — § 1122 sovereign immunity + Lanham Act application]
+
+        *Question 4:* [FILL IN — copyright registration timing and damages question]
+
+        *Question 5:* [FILL IN — dual-vector IP + FAA enforcement scenario]
+
+        === Key Terms — Chapter 5
+
+        [cols="1,3",options="header"]
+        |===
+        |Term |Definition
+
+        |Incontestability
+        |[FILL IN]
+
+        |Naked License
+        |[FILL IN]
+
+        |Work-for-Hire
+        |[FILL IN]
+
+        |Dilution
+        |[FILL IN]
+
+        |Trade Secret
+        |[FILL IN]
+
+        |Field-of-Use Restriction
+        |[FILL IN]
+
+        |DTSA
+        |[FILL IN]
+
+        |No-Challenge Clause
+        |[FILL IN]
+        |===
+
+        === Required Reading — Chapter 5
+
+        * [FILL IN]
+        * [FILL IN]
+        * [FILL IN]
+        * [FILL IN]
+
+        '''
+
+        [.chapter-nav]
+        link:chapter-04.html[← Chapter 4: Federal Arbitration Act] | link:chapter-06.html[Chapter 6: Risk Management →]
+
+        '''
+
+        [.footer-credential]
+        _Trustee Authorization: GA-TR-RDL2018-2025 · SmoothOperationofLaw™ Irrevocable Trust_
+        _"My top priority is to earn your trust and keep it."_
+
+
+
+
+
+
+        `;
+
+        TEMPLATES['blog-master'] = `[BLOG POST TITLE] | SmoothOperationofLaw™
+        <!-- ════════════════════════════════════════════════════════════════
+        BLOG POST MASTER TEMPLATE v5.0
+        SmoothOperationofLaw™ Irrevocable Trust
+        File: blog-post-YYYY-MM-DD-slug.html
+        Author: Lord Ramon De Leon, Head Trustee
+        Auth: GA-TR-RDL2018-2025
+        ════════════════════════════════════════════════════════════════ -->
+
+        Schema.org JSON-LD:
+        {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[BLOG POST TITLE]",
+        "description": "[One sentence hook]",
+        "datePublished": "[2026-01-22]",
+        "author": {
+        "@type": "Person",
+        "name": "Lord Ramon De Leon",
+        "jobTitle": "Head Trustee",
+        "description": "U.S. Marine Corps Veteran, Doctorate in Law, 140+ enforcement actions"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "SmoothOperationofLaw™",
+        "logo": { "@type": "ImageObject", "url": "https://assets.onecompiler.app/43fz3krny/43fz3pmaj/1000001430.png" }
+        }
+        }
+
+        CONTENT STRUCTURE:
+        ─────────────────────────────────────────────────────
+        📚 LEARNING OBJECTIVES (5 items, kpi-bar with Difficulty/Time/Rate/Cert)
+        📋 EXECUTIVE SUMMARY (2-5 sentences + Key Takeaway + Strategic Context)
+        📊 OPERATIONAL METRICS TABLE (Clarity/Repeatability/Actionability/Compliance/Value)
+        📚 TABLE OF CONTENTS (auto-generated via JS)
+        🎯 CORE CONTENT:
+        1) THE PROBLEM (problem-box: What Breaks / Operational Cost / Why It Matters)
+        2) THE SOLUTION (solution-box + step-block × 3: What/Why/How to Verify)
+        THE EVIDENCE (case-study + before/after table + quote)
+        LEGAL FRAMEWORK (statutory-compliance table + case law list)
+        ✅ TACTICAL IMPLEMENTATION CHECKLIST (3 phases: Assessment/Documentation/Verification)
+        🚫 COMMON MISTAKES × 3
+        👤 ABOUT THE AUTHOR (trust-note + bio + credential badge)
+        📤 SHARE THIS RESOURCE (5 buttons: Link/X/LinkedIn/Telegram/WhatsApp)
+        🔗 RELATED STRATEGIC FRAMEWORKS (3 related-card items)
+        🎯 ADVANCE YOUR TRUSTEE CAPACITY (newsletter CTA)
+        ─────────────────────────────────────────────────────
+        SOL™ COMPONENTS:
+        .sol-header / .sol-badge / .sol-title / .sol-subtitle
+        .sol-section / .sol-warning-box / .sol-tip-box
+        .sol-checklist / .sol-metrics-table / .sol-legal-table
+        .sol-quote / .sol-author-box / .sol-compliance-box
+        .tag-gold / .difficulty-badge (beginner/intermediate/advanced)
+
+        FOOTER: See Footer Standards section.
+        COMPLIANCE: Educational Content Only — no attorney-client relationship.
+        LEGAL CITATION: All IP protected under 15 U.S.C. §§ 1114–1118`;
+
+        TEMPLATES['course-tpl'] = `COURSE CHAPTER TEMPLATE — SmoothOperationofLaw™
+        ═══════════════════════════════════════════════════════════
+        File: chapter-XX-slug.html
+        Auth: GA-TR-RDL2018-2025
+        Tracks: CATM | CATM+ | CATM-PRO | CGIPE
+        ═══════════════════════════════════════════════════════════
+
+        FRONT MATTER (Jekyll/Eleventy):
+        chapter: XX
+        title: "Chapter XX: [Chapter Title]"
+        track: CATM          # CATM | CATM+ | CATM-PRO | CGIPE
+        cle_hours: 1.5
+        difficulty: Intermediate
+        prerequisites:
+        - "Chapter [N]: [Title]"
+        governing_law:
+        - "FAA, 9 U.S.C. §§ 1–16"
+        - "Lanham Act, 15 U.S.C. §§ 1114–1118"
+        case_law:
+        - "AT&T Mobility LLC v. Concepcion, 563 U.S. 333 (2011)"
+        author: "Lord Ramon De Leon"
+        revdate: 2026-04-04
+
+        CONTENT STRUCTURE:
+        ─────────────────────────────────────────────────────
+        📋 CHAPTER HEADER (sol-post-header with badge, title, subtitle, sol-meta pills)
+        📚 LEARNING OBJECTIVES:
+        After completing this chapter, you will be able to:
+        1. Identify — [What the student recognizes or locates]
+        2. Execute — [What the student performs operationally]
+        3. Apply — [How the student deploys knowledge in a real scenario]
+        4. Evaluate — [How the student assesses outcomes or compliance]
+        Difficulty: [Foundational / Intermediate / Advanced]
+        CLE Credit: [X.X hours]
+        Outcome Type: Actionable
+
+        CORE CHAPTER SECTIONS:
+        1. [Section Title] — Main doctrine/content
+        2. Legal Framework Analysis — statutes + case law table
+        3. Tactical Application:
+        - Thought Drill (challenging scenario)
+        - Practical Exercise (draft/complete task)
+        - Challenge (advanced extension)
+        4. Key Takeaways (3–7 bullet points)
+        5. CATM Assessment (5 questions)
+        6. Key Terms (glossary table)
+        7. Required Reading (3–5 items)
+
+        CHAPTER NAVIGATION FOOTER:
